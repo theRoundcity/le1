@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Loading Effect</title>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: darkred;
+                margin: 0;
+                padding: 0;
+            }
+            .loading,.loading:before,.loading:after{
+                width: 14px;
+                height: 48px;
+                background-color: white;
+                position: relative;
+                top: 0;
+                animation: load 1.2s infinite ease-in-out;
+            }
+            .loading{
+                animation-delay: .8s;
+            }
+            .loading:before{
+                content: "";
+                left: -20px;
+                position: absolute;
+            }
+            .loading:after{
+                animation-delay: .4s;
+                content: "";
+                left: 20px;
+                position: absolute;
+            }
+            @keyframes load{
+                50%{
+                    transform: scaleY(1.5);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="loading"></div>
+    </body>
+</html>
